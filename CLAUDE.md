@@ -54,16 +54,40 @@ Mobilverzión: nav menü elrejtve, egységes padding, képek stack-elve
 
 ## Szekciók
 
-| Szekció         | HTML ID           | CSS osztályok                          |
-|-----------------|-------------------|----------------------------------------|
-| Navigáció       | –                 | `nav`, `.nav-logo`, `.nav-links`       |
-| Hero            | –                 | `.hero`, `.hero-inner`, `.hero-stats`  |
-| Szolgáltatások  | `#szolgaltatasok` | `.services-bg`, `.services-grid`       |
-| Rólunk          | `#rolunk`         | `.why-layout`, `.why-grid`             |
-| Vélemények      | `#velemenyek`     | `.reviews-bg`, `.reviews-grid`         |
-| Nyitvatartás    | `#kapcsolat`      | `.hours-grid`                          |
-| CTA sáv         | –                 | `.contact-bg`                          |
-| Lábléc          | –                 | `footer`                               |
+| Szekció         | HTML ID           | CSS osztályok                                    |
+|-----------------|-------------------|--------------------------------------------------|
+| Navigáció       | –                 | `nav`, `.nav-logo`, `.nav-links`                 |
+| Hero            | –                 | `.hero`, `.hero-inner`, `.hero-stats`            |
+| Szolgáltatások  | `#szolgaltatasok` | `.services-bg`, `.services-grid`, `.service-card`|
+| Rólunk          | `#rolunk`         | `.why-layout`, `.why-grid`, `.why-image-wrap`    |
+| Vélemények      | `#velemenyek`     | `.reviews-bg`, `.reviews-grid`                   |
+| Nyitvatartás    | `#kapcsolat`      | `.hours-grid`                                    |
+| CTA sáv         | –                 | `.contact-bg`                                    |
+| Lábléc          | –                 | `footer`                                         |
+
+---
+
+## Komponensek
+
+### Service kártyák (`.service-card`)
+
+Minden kártya tartalmaz:
+- **Bal oldali kék akcentcsík** (`border-left: 3px solid var(--blue)`) — hoverre `var(--accent)` sárgára vált
+- **SVG ikon** a `.service-icon` div-ben (`color: var(--blue)`, `currentColor` stroke-kal)
+- Cím (`.service-card h3`) és leíró szöveg
+
+**Ha ikont cserélsz:** az `index.html`-ben a `.service-icon` div belsejébe tedd az új SVG-t. Inline SVG-t használunk (nincs külső fájl), `stroke="currentColor"` attribútummal — így a szín CSS-ből vezérelhető.
+
+Aktuális ikonok és megfelelőik:
+
+| Szolgáltatás              | Ikon típusa     |
+|---------------------------|-----------------|
+| Motor & Hajtáslánc        | csavarkulcs     |
+| Felfüggesztés & Futómű    | kerék (küllős)  |
+| Elektromos rendszerek     | villám          |
+| Klíma szerviz             | hópehely        |
+| Műszaki vizsgára felkész. | jelölőlap (✓)   |
+| Olajcsere & Szűrők        | csepp           |
 
 ---
 
